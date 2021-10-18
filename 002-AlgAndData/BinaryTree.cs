@@ -103,13 +103,21 @@ namespace Lessons
             PrintTree(Root);
 
         }
-        public void PrintTree(BinaryTreeNode Root, string space="")
+        public void PrintTree(BinaryTreeNode Root,  string space = "")
         {
+
             if (Root != null)
             {
+
                 Console.WriteLine("{1} {0}", Root.Data, space);
-                PrintTree(Root.Left, space+"    ");
-                PrintTree(Root.Right, space + "    ");
+                space = space.Replace('L', ' ');
+                space = space.Replace('R', ' ');
+                PrintTree(Root.Left, space + "    L");
+                PrintTree(Root.Right, space + "    R");
+            }
+            else
+            {
+                Console.WriteLine("{0} пусто", space);
             }
 
         }
@@ -201,6 +209,7 @@ namespace Lessons
                 totalNodes--;
             }
         }
+
     }
 
     interface ITree
