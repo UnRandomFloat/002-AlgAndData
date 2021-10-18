@@ -11,10 +11,15 @@ namespace Lessons
     /// </summary>
     public class BinaryTreeNode
     {
+        public bool visited { get; set; } = false;
         public int Data { get; private set; }
         public BinaryTreeNode Right { get; set; }
         public BinaryTreeNode Left { get; set; }
         public BinaryTreeNode Parent { get;  set; }
+        public BinaryTreeNode()
+        {
+
+        }
         public BinaryTreeNode(int data)
         {
             this.Data = data;

@@ -105,7 +105,7 @@ namespace Lessons
             Console.ReadLine();
 
         }
-        public static void BinaryTreeSearch()
+        public static BinaryTree BinaryTreeSearch()
         {
             BinaryTree BTree = new BinaryTree();
             string[] menuRows =
@@ -114,9 +114,10 @@ namespace Lessons
                 "1- Добавить узел в дерево",
                 "2- Удалить узел по значению",
                 "3- Получить узел по значению",
-                "4- Вывести дерево в консоль"
+                "4- Вывести дерево в консоль",
+                "5- Выход в предыдущее меню (а так же возврат заполненного дерева)"
             };
-            Menu binaryTreeMenu = new Menu(menuRows, "Выберите пункт меню или введите 100 для выхода в меню практического здания","Некорректное значение. Повторите ввод");
+           Menu binaryTreeMenu = new Menu(menuRows, "Выберите пункт меню","Некорректное значение. Повторите ввод");
             ValidChoice VC = new ValidChoice();
             bool onemoretime = true;
             while (onemoretime)
@@ -129,7 +130,7 @@ namespace Lessons
                         string message = BTree.GetRoot() == null ? "У дерева нет корня" : $"Корень дерева  - {BTree.GetRoot().Data}";
                         Console.WriteLine(message);
                         repit();
-                        break;
+                       break;
                     case 1:
                         BTree.AddItem(VC.FromRandom(0, int.MaxValue - 10, "Введите значение которое нужно добавить", "Некорректное значение. Повторите ввод"));
                         repit();
@@ -146,20 +147,37 @@ namespace Lessons
                         BTree.PrintTree();
                         repit();
                         break;
-                    case 100:
+                    case 5:
                         onemoretime = false;
                         break;
                     dafault:
+   
                         break;
 
                 }
+               // return BTree;
             }
+            
             void repit()
             {
                 Console.WriteLine("Enter для продолжения");
                 Console.ReadLine();
                 Console.Clear();
             }
+            return BTree;
+        }
+        public static BinaryTree RandomTree(int n)
+        {
+           
+            BinaryTree BT = new BinaryTree();
+            BT.AddItem(n);
+            for (int i = 1; i < n; i++)
+            {
+          
+                BT.AddItem(new Random().Next(n-(n-1), n-1));
+             
+            }
+            return BT;
         }
 
 
