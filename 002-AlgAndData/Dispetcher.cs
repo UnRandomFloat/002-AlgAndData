@@ -48,12 +48,17 @@ namespace Lessons
                         Lesson5.LessonMenu();
                         MainMenu.PrintMenu();
                         break;
+                    case 6:
+                        Console.Clear();
+                        Lesson6.LessonMenu();
+                        MainMenu.PrintMenu();
+                        break;
                     case 100:
                         repit = false;
                         break;
                     default:
                         Console.WriteLine("Практическое задание к этому уроку еще неготово.");
-                        Console.WriteLine("На данный момент выполнены практические задания урока №1,2,3,4,5");
+                        Console.WriteLine("На данный момент выполнены практические задания урока №1,2,3,4,5,6");
                         repit = true;
                         break;
                 }

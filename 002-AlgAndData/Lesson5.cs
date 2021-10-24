@@ -39,11 +39,11 @@ namespace Lessons
                         if (BT == null)
                         {
                             BT = Lesson4.RandomTree(11);
-                            datatoFind = VC.FromRandom(5, 20, "Введите искомое целое число.", "Некорректное значение. Повторите ввод:");
+                            datatoFind = VC.FromRandom(5, 20, "Введите искомое целое число.");
                         }
                         else
                         {
-                            datatoFind = VC.FromRandom(5, int.MaxValue, "Введите искомое целое число.", "Некорректное значение. Повторите ввод:");
+                            datatoFind = VC.FromRandom(5, int.MaxValue, "Введите искомое целое число.");
                         }
                         Bfs.BreadthFirstSearch(datatoFind, BT.Root);
                         break;
@@ -51,11 +51,11 @@ namespace Lessons
                         if (BT == null)
                         {
                             BT = Lesson4.RandomTree(11);
-                            datatoFind = VC.FromRandom(5, 20, "Введите искомое целое число.", "Некорректное значение. Повторите ввод:");
+                            datatoFind = VC.FromRandom(5, 20, "Введите искомое целое число.");
                         }
                         else
                         {
-                            datatoFind = VC.FromRandom(5, int.MaxValue, "Введите искомое целое число.", "Некорректное значение. Повторите ввод:");
+                            datatoFind = VC.FromRandom(5, int.MaxValue, "Введите искомое целое число.");
                         }
                         Dfs.DeepFirstSearch(datatoFind, BT.Root);
                         break;

@@ -23,7 +23,7 @@ namespace Lessons
         /// <param name="item">Название пунктов</param>
         /// <param name="whatToChoice">Сообщение для корректного выбора</param>
         /// <param name="errChoice">Сообщение некорректного выбора</param>
-        public Menu(int first, int last, string item, string whatToChoice, string errChoice)
+        public Menu(int first, int last, string item, string whatToChoice, string errChoice= "Некорректное значение. Повторите ввод")
         {
             FirstPoint = first;
             LastPoint = last;
@@ -31,7 +31,7 @@ namespace Lessons
             Message = whatToChoice;
             ErrChoice = errChoice;
         }
-        public Menu(string[] pointrows, string whatToChoice, string errChoice)
+        public Menu(string[] pointrows, string whatToChoice, string errChoice= "Некорректное значение. Повторите ввод")
         {
             FirstPoint = 0;
             LastPoint = pointrows.Length-1;
