@@ -21,7 +21,7 @@ namespace Lessons
         /// <param name="whatToChoice"></param>
         /// <param name="errChoice"></param>
         /// <returns>int чило выбранное в соответсвии с критериями</returns>
-        public int FromRandom(int first, int last, string whatToChoice, string errChoice)
+        public int FromRandom(int first, int last, string whatToChoice, string errChoice="Некорректное значение. Повторите ввод:")
         {
             Console.WriteLine("{0} (от {1} до {2})", whatToChoice, first, last);
             int numChoice = 0;
