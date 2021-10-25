@@ -5,7 +5,7 @@ namespace Lessons
 {
     class Lesson2
     {
-        public static void LessonMenu()
+        public  void LessonMenu()
         {
             bool onemoretime = true;
             while (onemoretime)

@@ -24,33 +24,45 @@ namespace Lessons
                 {
                     case 1:
                         Console.Clear();
-                        Lesson1.LessonMenu();
+                        Lesson1 L1 = new Lesson1();
+                        L1.LessonMenu();
                         MainMenu.PrintMenu();
                         break;
                     case 2:
                         Console.Clear();
-                        Lesson2.LessonMenu();
+                        Lesson2 L2 = new Lesson2();
+                        L2.LessonMenu();
                         MainMenu.PrintMenu();
                         break;
                     case 3:
                         Console.Clear();
-                        Lesson3.LessonMenu();
+                        Lesson3 L3 = new Lesson3();
+                        L3.LessonMenu();
                         MainMenu.PrintMenu();
                         break;
                     case 4:
                         Console.Clear();
-                        Lesson4.LessonMenu();
+                        Lesson4 L4 = new Lesson4();
+                        L4.LessonMenu();
                         Console.Clear();
                         MainMenu.PrintMenu();
                         break;
                     case 5:
                         Console.Clear();
-                        Lesson5.LessonMenu();
+                        Lesson5 L5 = new Lesson5();
+                        L5.LessonMenu();
                         MainMenu.PrintMenu();
                         break;
                     case 6:
                         Console.Clear();
-                        Lesson6.LessonMenu();
+                        Lesson6 L6 = new Lesson6();
+                        L6.LessonMenu();
+                        MainMenu.PrintMenu();
+                        break;
+                    case 7:
+                        Console.Clear();
+                        Lesson7 L7 = new Lesson7();
+                        L7.LessonMenu();
                         MainMenu.PrintMenu();
                         break;
                     case 100:
