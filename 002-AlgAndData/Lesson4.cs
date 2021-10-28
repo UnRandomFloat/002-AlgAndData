@@ -8,7 +8,7 @@ namespace Lessons
 {
     public class Lesson4
     {
-        public static void LessonMenu()
+        public void LessonMenu()
         {
             bool onemoretime = true;
             while (onemoretime)
@@ -45,7 +45,7 @@ namespace Lessons
                 }
             }
         }
-        public static void ArrayHashSetCompare()
+         void ArrayHashSetCompare()
         {
             Console.WriteLine("Тест поиcка строки в масcиве и HashSet:");
             Console.WriteLine();
@@ -105,7 +105,7 @@ namespace Lessons
             Console.ReadLine();
 
         }
-        public static BinaryTree BinaryTreeSearch()
+        public  BinaryTree BinaryTreeSearch()
         {
             BinaryTree BTree = new BinaryTree();
             string[] menuRows =
@@ -151,7 +151,6 @@ namespace Lessons
                         onemoretime = false;
                         break;
                     dafault:
-   
                         break;
 
                 }
@@ -166,7 +165,7 @@ namespace Lessons
             }
             return BTree;
         }
-        public static BinaryTree RandomTree(int n)
+        public  BinaryTree RandomTree(int n)
         {
            
             BinaryTree BT = new BinaryTree();

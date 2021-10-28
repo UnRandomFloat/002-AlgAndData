@@ -7,7 +7,7 @@ namespace Lessons
 {
     class Lesson1
     {
-        public static void LessonMenu() // точка входа в практические задания к первому уроку!
+        public void LessonMenu() // точка входа в практические задания к первому уроку!
         {
             ValidChoice VC = new ValidChoice();
             bool onemoretime = true;
@@ -45,7 +45,7 @@ namespace Lessons
 
             }
         }
-        static void isSimpleNumber(int n)//проверка на простые числа
+        public void isSimpleNumber(int n)//проверка на простые числа
         {
             int d = 0;
             int i = 2;
@@ -83,7 +83,7 @@ namespace Lessons
             Console.ReadLine();
             Console.Clear();
         }
-        static void TestFibonach(int choice)//метод ля расчета числа фибоначи двумя способами (Циклом и Рекурсией)
+        void TestFibonach(int choice)//метод ля расчета числа фибоначи двумя способами (Циклом и Рекурсией)
         {
             ValidChoice VC = new ValidChoice();
             int n = VC.FromRandom(1, 50, "Введите положительное целое число", "Некорректное значение. Повторите ввод");

@@ -8,7 +8,7 @@ namespace Lessons
 {
     class Lesson6
     {
-        public static void LessonMenu()
+        public void LessonMenu()
         {
             string[] menuRows ={
                 "0 - Создать Граф для тестирования обхода BFS & DFS", //(если пропустить этот шаг, будет создан(или нет) граф со случайными числами)?,
@@ -18,8 +18,6 @@ namespace Lessons
             Menu Lesson6Menu = new Menu(menuRows, "Выбирите пункт меню или введите 100 для возрата в предыдущее", "Некорректное значение. Повторите ввод.");
             ValidChoice VC = new ValidChoice();
             Graph EG=new Graph();
-
-            int datatoFind;
             bool onemoretime = true;
             BFS Bfs = new BFS();
             DFS Dfs = new DFS();

@@ -9,7 +9,7 @@ namespace Lessons
 {
     public class Lesson3
     {
-        public static void LessonMenu()
+        public void LessonMenu()
         {
             bool onemoretime = true;
             while (onemoretime)
@@ -37,7 +37,7 @@ namespace Lessons
 
             }
         }
-        public static void TestBench()
+        public void TestBench()
         {
             BenchmarkSwitcher.FromAssembly(typeof(Lesson3).Assembly).Run();
         }

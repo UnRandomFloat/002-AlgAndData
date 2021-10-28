@@ -7,7 +7,7 @@ namespace Lessons
 {
     class Lesson5
     {
-        public static void LessonMenu()
+        public void LessonMenu()
         {
             string[] menuRows ={
                 "0 - Создать дерево для тестирования обхода BFS & DFS (если пропустить этот шаг, будет создано дерево со случайными числами)",
@@ -17,7 +17,7 @@ namespace Lessons
             Menu Lesson5Menu = new Menu(menuRows, "Выбирите пункт меню или введите 100 для возрата в предыдущее", "Некорректное значение. Повторите ввод.");
             ValidChoice VC = new ValidChoice();
             BinaryTree BT=null; //= Lesson4.BinaryTreeSearch();
-            
+            Lesson4 L4 = new Lesson4();
             int datatoFind;
             bool onemoretime = true;
             BFS Bfs = new BFS();
@@ -29,7 +29,7 @@ namespace Lessons
                 switch (choice)
                 {
                     case 0:
-                        BT = Lesson4.BinaryTreeSearch();
+                        BT = L4.BinaryTreeSearch();
                         BT.PrintTree();
                         Console.WriteLine("Дерево заполнено. Для продолжения нажмите Enter.");
                         Console.ReadLine();
@@ -38,7 +38,7 @@ namespace Lessons
       
                         if (BT == null)
                         {
-                            BT = Lesson4.RandomTree(11);
+                            BT = L4.RandomTree(11);
                             datatoFind = VC.FromRandom(5, 20, "Введите искомое целое число.");
                         }
                         else
@@ -50,7 +50,7 @@ namespace Lessons
                     case 2:
                         if (BT == null)
                         {
-                            BT = Lesson4.RandomTree(11);
+                            BT = L4.RandomTree(11);
                             datatoFind = VC.FromRandom(5, 20, "Введите искомое целое число.");
                         }
                         else
@@ -64,8 +64,7 @@ namespace Lessons
                         break;
                     default:
                         break;
-                        //BT.PrintTree();
-                        //break;
+            
                 }
             }
 
